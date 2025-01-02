@@ -41,10 +41,13 @@
     </header>
     <div class="intro">
         <h1>Authentic Tapas, Crafted with Passion</h1>
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-3 col-sm-6 menu">Desayuno</div>
-            <div class="col-12 col-lg-3 col-sm-6 menu">Almuerzo</div>
-            <div class="col-12 col-lg-3 col-sm-6 menu">Cena</div>
+        <div class="row justify-content-end menu-row">
+            <a  href="" class="col-12 col-lg-3 col-md-5 col-sm-5 col-mb-5 menu">
+            <div>Menu</div>
+        </a>
+        <a  href="" class="col-12 col-lg-3 col-md-5 col-sm-5 col-mb-5 menu">
+            <div>Reserva</div>
+        </a>
         </div>
     </div>
 </div>
@@ -90,10 +93,49 @@
             </div>
             
           </div>
-          <div class="where mx-auto">
+          <div class="row mx-auto justify-content-start">
+          <div class="where col-12 col-lg-5 col-md-10 col-sm-10 mx-auto">
             <h3>DONDE ESTAMOS</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19120.145935193523!2d6.5601536000000005!3d53.19958905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c832a53fdb1fa1%3A0x8aeff8ce986c2bd5!2sHEMA%20Groningen%20Overwinningsplein!5e0!3m2!1snl!2snl!4v1735837231716!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+          <div class="contact-section col-12 col-lg-5 col-md-8 col-sm-10" id="contact">
+            <div class="contact-intro">
+              <h2 class="contact-title">Get in Touch</h2>
+              <p class="contact-description">
+                Please feel free to reach out at anytime via the form below and I will get back to you ASAP.
+              </p>
+            </div>
+          
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          
+              <input type="hidden" name="access_key" value="d859d07a-456d-4eb9-a63b-1a4238491af4" />
+              <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+              <input type="hidden" name="from_name" value="My Website" />
+              
+          
+              <div class="form-group-container">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input id="name" name="name" class="form-input" placeholder="Your name" type="text"  required/>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required/>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone (optional)</label>
+                  <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required ></textarea>
+                </div>
+              </div>
+              <button class="form-submit" type="submit">Send Message</button>
+            </form>
+          
+        </div>
+        </div>
     </main>
 
     <footer class="footer bg-dark text-white py-4">
@@ -101,23 +143,23 @@
             <div class="row">
                 <!-- Business Info Section -->
                 <div class="col-md-4 mb-3">
-                    <h5>AM Plumbing and Heating</h5>
-                    <p>Reliable plumbing and heating services in Belfast and beyond. We are your trusted partner for installations, repairs, and maintenance.</p>
+                    <h5>Miguels Tapas Bar</h5>
+                    <p>La mejor Calidad, sabor y experiencia de España aqui en Groningen.</p>
                 </div>
     
                 <!-- Contact Section -->
                 <div class="col-md-4 mb-3">
                     <h5>Contact Us</h5>
-                    <p>Email: <a href="mailto:amplumbing321@gmail.com" class="text-white">amplumbing321@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+447123456789" class="text-white">+447708632383</a></p>
+                    <p>Email: <a href="mailto:amplumbing321@gmail.com" class="text-white">miguelstapas@tapasbar.com</a></p>
+                    <p>Phone: <a href="tel:+447123456789" class="text-white">+34680639505</a></p>
                 </div>
     
                 <!-- Quick Links Section -->
                 <div class="col-md-4 mb-3">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#services" class="text-white">Our Services</a></li>
-                        <li><a href="#why" class="text-white">Why Choose Us?</a></li>
+                        <li><a href="#services" class="text-white">Menu</a></li>
+                        <li><a href="#why" class="text-white">Reservations</a></li>
                         <li><a href="#contact" class="text-white">Contact Us</a></li>
                     </ul>
                 </div>
@@ -128,7 +170,7 @@
             <!-- Social Media & Copyright -->
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; 2025 AM Plumbing and Heating. All Rights Reserved.</p>
+                    <p>&copy; 2025 MIGUELS TAPAS BAR. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-center">
                     <a href="https://www.facebook.com/61566741065343" target="_blank" class="facebook-link mr-3">
