@@ -162,6 +162,7 @@ main{
     background-color: rgb(54,69,79,0.2);
     border-radius: 2px;
     margin-left: 10px;
+    margin-bottom: 15px;
     padding-bottom: 2px;
     justify-content: center;
   }
