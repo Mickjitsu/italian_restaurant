@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeNav = document.getElementById("closeToggle"); // Close button inside the navigation
     const sideNav = document.getElementById("sideNav");
     const body = document.body;
+    const navHeading = document.querySelector(".nav-heading");
 
     // Toggle Side Navigation on navToggle Click
     navToggle.addEventListener("click", function (event) {
@@ -94,8 +95,28 @@ document.addEventListener('DOMContentLoaded', function () {
             handleSlideButtons();
         });
     }
-    
     window.addEventListener("resize", initSlider);
     window.addEventListener("load", initSlider);
+    
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) { // Adjust this value based on when you want the color to appear
+            navHeading.classList.add('scrolled');
+            navHeading.classList.remove('transparent');
+        } else {
+            navHeading.classList.add('transparent');
+            navHeading.classList.remove('scrolled');
+        }
+    });
+
+    // Initialize state
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.add('transparent');
+    }
+
+   
+
+
 });
 

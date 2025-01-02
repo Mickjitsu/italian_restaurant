@@ -13,22 +13,36 @@ main{
     background-color: #eae4d3;
 
 }
+
+
 .nav-heading {
     height: 100px;
-    background: linear-gradient(135deg, #d2b48c, #a48d74);
+    /*background: linear-gradient(135deg, #d2b48c, #a48d74);*/
+    background-color: transparent;
     font-family: 'Merienda', sarif;
     width: 100% !important;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    /*box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15);*/
     position: fixed;
     overflow: visible;
     z-index: 3;
+    color: antiquewhite;
 }
 
+.nav-heading.transparent {
+  background-color: transparent;
+}
+
+.nav-heading.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -40px;
+  padding-top: 40px;
+}
 
 .navbar-custom {
     display: inline-block;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 5px;
     padding-right: 8%;
 }
 
@@ -39,9 +53,9 @@ main{
 .navbar-toggler {
     background-color: transparent;
     background-image: 
-        linear-gradient(black, black), 
-        linear-gradient(black, black), 
-        linear-gradient(black, black);
+        linear-gradient(antiquewhite, antiquewhite), 
+        linear-gradient(antiquewhite, antiquewhite), 
+        linear-gradient(antiquewhite, antiquewhite);
     background-repeat: no-repeat;
     background-size: 25px 3px, 25px 3px, 25px 3px;
     background-position: 0 6px, 0 13px, 0 20px;
@@ -50,7 +64,7 @@ main{
 
 
 .navbar-button {
-  padding-top: 40px;
+  padding-top: 10px;
     padding-left: 20px;
     position: relative;
 }
@@ -107,7 +121,9 @@ main{
   }
 
 .close-button {
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  margin-top: -20px;
 }
 
 .closeToggle{
@@ -120,19 +136,20 @@ main{
     background-size: 25px 3px, 25px 3px, 25px 3px;
     background-position: 0 6px, 0 13px, 0 20px;
     border: 0 !important;
+    padding-bottom: 20px;
 }
 
   .hero {
-    height: 550px;
+    min-height: 700px;
     width: 100%;
     background-image: 
     linear-gradient(to bottom, rgba(210, 180, 140, 0.7), rgba(164, 141, 116, 0.7)), 
     url('/assets/images/restaurant-hero.jpg');
     background-blend-mode:soft-light;
     background-size: cover; 
-    padding-top: 30px;
     background-repeat: no-repeat;
     position: relative;
+    z-index: 10;
   }
 
   .intro {
@@ -143,23 +160,29 @@ main{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   .intro h1 {
+    font-family: 'Merienda', sarif;
     font-size: 50px;
+    margin-top: 250px;
+    color: antiquewhite;
   }
 
   .intro p {
     font-family: 'Merienda', sarif;
     font-size: 25px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
   /*IMAGE SECTION*/
   .container {
     max-width: 1200px;
-    width: 95%;
+    width: 100%;
     margin-top: 80px;
   }
   .slider-wrapper {
@@ -252,24 +275,7 @@ main{
     top: -10px;
     bottom: -10px; }
 
-    @media only screen and (max-width: 1023px) {
-      .slider-wrapper .slide-button {
-        display: none !important;
-      }
-      .slider-wrapper .image-list {
-        gap: 10px;
-        margin-bottom: 15px;
-        scroll-snap-type: x mandatory;
-      }
-      .slider-wrapper .image-list .image-item {
-        width: 280px;
-        height: 380px;
-        margin-left: 10px;
-      }
-      .slider-scrollbar .scrollbar-thumb {
-        width: 20%;
-      }
-    }
+  
 
     /*MICHELIN SECTION*/
     .michelin {
@@ -300,19 +306,55 @@ main{
       letter-spacing: 3px;
     }
 
-@media screen and (max-width: 354px){
+
+    /*WHERE*/
+    .where {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Merienda', sarif;
+    }
+
+    .where iframe {
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto; 
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .slider-wrapper .slide-button {
+        display: none !important;
+      }
+      .slider-wrapper .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+      }
+      .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 380px;
+        margin-left: 2px;
+      }
+      .slider-scrollbar .scrollbar-thumb {
+        width: 20%;
+      }
+    }
+@media screen and (max-width: 360px){
     .nav-heading {
-        height: 120px;
+        height: 150px;
     }
     .navbar-button {
-        padding-top: 40px;
-        padding-left: 20px;
+        padding-top: 25px;
+        padding-left: 5px;
     }
 }
 
 @media screen and (min-width: 992px){
     .hero {
-        height: 600px;
+        min-height: 700px;
         width: 100%;
         background-image: 
     linear-gradient(to bottom, rgba(210, 180, 140, 0.7), rgba(164, 141, 116, 0.7)), 
